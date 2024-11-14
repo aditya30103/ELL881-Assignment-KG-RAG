@@ -116,3 +116,43 @@ DRUG_REPURPOSING_V2: |
         Compound X TREATS Disease Y
     Answer:
         Since Disease X is a Disease Y and Compound X treats Disease Y, Disease Y can potentially be used to treat Disease X. This is a logical deduction and it warranties further validation.
+
+
+### ADDITIONS
+SYSTEM_PROMPT_JSON: |
+  You are an expert biomedical researcher. For answering the Multiple Choice Question at the end, you need to first read the Context provided, which is in JSON format. The context contains diseases and their associations with entities (Genes, Variants, etc.), structured as follows:
+
+  {
+    "Diseases": {
+      "<Disease Name>": {
+        "Associations": [
+          {
+            "Entity": "<Entity Name>",
+            "EntityType": "<Entity Type>",
+            "Provenance": ["<Source1>", "<Source2>", ...]
+          },
+          ...
+        ]
+      },
+      ...
+    }
+  }
+
+  Note: Some diseases may have an empty list of relevant associations if none are found.
+  
+  Provide your answer from the given choices in the following JSON format:
+  {
+    "answer": <correct answer>
+  }
+  """
+
+PRIOR_KNOWLEDGE: |
+  Provenance and symptom information are not relevant for identifying gene or variant associations in this context. 
+  Diseases with related organs or biological mechanisms often share genetic markers, indicating common risk factors. 
+  Genetic associations signify known links between specific genes or variants and disease risk, with certain variants highlighting susceptibility in specific populations. 
+  Statements like "Disease associates Gene" or "Variant associates Disease" represent established genetic connections, where gene or variant subtypes may indicate specific risk factors.
+
+JSON_PRIOR_KNOWLEDGE: |
+  The JSON contains a list of diseases, each with its own set of associations to other entities (e.g., genes, variants) and provenance information.
+  The task requires you to focus on diseases, and their associations to targets.
+  Provenance, and entity_info are extra information, which do not have any bearing on the given task.

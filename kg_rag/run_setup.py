@@ -21,9 +21,9 @@ if True:
     print("Checking disease vectorDB ...")
     print("The current VECTOR_DB_PATH is ", config_data["VECTOR_DB_PATH"])
     try:
-        if os.path.exists(config_data["VECTOR_DB_PATH"]):
-            print("vectorDB already exists!")
-        else:
+        # if os.path.exists(config_data["VECTOR_DB_PATH"]):
+        #     print("vectorDB already exists!")
+        # else:
             print("Creating vectorDB ...")
             from kg_rag.vectorDB.create_vectordb import create_vectordb
             create_vectordb()

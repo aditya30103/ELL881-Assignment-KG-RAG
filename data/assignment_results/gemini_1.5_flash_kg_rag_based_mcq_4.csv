@@ -1,0 +1,21 @@
+question,correct_answer,llm_answer
+"Out of the given list, which Variant is associated with breast carcinoma and male breast cancer. Given list is:  rs11651755, rs9271588,  rs2472493, rs3803662,  rs4459895",rs3803662,"```json
+{
+  ""answer"": ""None of the listed variants are associated with breast carcinoma or male breast cancer based on the provided context.""
+}
+```"
+"Out of the given list, which Variant is associated with abdominal aortic aneurysm and thoracic aortic aneurysm. Given list is:  rs11675342, rs595244, rs3018362,  rs11651755,  rs1709393",rs595244,"```json
+{
+  ""answer"": ""None of the listed variants are associated with abdominal aortic aneurysm or thoracic aortic aneurysm.""
+}
+```"
+"Out of the given list, which Variant is associated with Kawasaki disease and inflammatory bowel disease. Given list is: rs573872,  rs2072499,  rs1333040, rs1801274,  rs3757318",rs1801274,"```json
+{
+  ""answer"": ""None of the listed variants are associated with Kawasaki disease or inflammatory bowel disease.""
+}
+```"
+"Out of the given list, which Variant is associated with inflammatory bowel disease and Kawasaki disease. Given list is: rs3764147, rs1801274,  rs3814113,  rs479844,  rs13141641",rs1801274,"```json
+{
+  ""answer"": ""None of the listed variants are associated with inflammatory bowel disease or Kawasaki disease.""
+}
+```"
