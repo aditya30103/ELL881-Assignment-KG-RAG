@@ -6,8 +6,8 @@ This project builds upon the work by Soman et al. (2024) to improve a Knowledge 
 
 Only the following files have been modified:
 
-1. **`run_mcq_qa.py`**: The main script updated to include new modes and logic for context retrieval and LLM prompting.
-2. **`utility.py`**: Updated with new functions and modifications to existing ones to support different modes of operation.
+1. **`kg_rag\rag_based_generation\GPT\run_mcq_qa.py`**: The main script updated to include new modes and logic for context retrieval and LLM prompting.
+2. **`kg_rag\utility.py`**: Updated with new functions and modifications to existing ones to support different modes of operation.
 3. **`system_prompts.yaml`**: Added new prompts required for the modified modes.
 
 ## Modes of Operation
